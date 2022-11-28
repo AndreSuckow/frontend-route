@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'MS-DOS';
+    src: url('./fonts/Fixedsys\ Excelsior\ 3.01\ Regular.ttf') format(truetype);
+    font-style: normal;
+}
+
+:root {
+    /* COLOR HEX */
+    --green-1: #49ff55;
+    --green-2: #32ae3a;
+    --white: #ffffff;
+    --black: #111;
+    --yellow: #ffe205;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* border: solid 0.1px red; */
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+section {
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 0 8%;
+}
+
+h1 {
+    font-family: "MS-DOS";
+    font-size: clamp(3rem, 2.8537rem + 0.8511vw, 3.875rem);
+    color: var(--yellow);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 8% 0;   
+}
+
+h2 {
+    font-family: "MS-DOS";
+    font-size: clamp(2.25rem, 2.1246rem + 0.7295vw, 3rem);
+    color: var(--green-2);
+    text-transform: uppercase;
+    margin: 8% 0;
+}
+
+p {
+    font-family: "MS-DOS";
+    font-size: clamp(1rem, 0.8955rem + 0.6079vw, 1.625rem);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+p:hover{
+    color: #49ff55;
+}
+
+section .pdf {
+    width: 90%;
+    border: solid 10px var(--yellow);
+    height: 100vh;
+    border-style: inset;
+    border-radius: 10px;
+}
+
+section .pdf:hover {
+    border: solid 10px var(--green-1);
+    border-style: inset;
+}
+
+section button {
+    margin: 5% calc(50% - 7em);
+    width: 15em;
+    background-color: #ffe205;
+    border-radius: 10px;
+    height: 5vh;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+section button:hover {
+    scale: 1.1;
+    background-color: #49ff55;
+}
+
+section button a:hover {
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex img {
+    width: 40%;
+}
+
+.text-left {
+    width: 50%;
+}
+
+.text-left p{
+    text-align: left;
+    justify-content: left;
+}
+
+
+/* responsivo */
+
+@media (max-width: 800px) {
+    .flex {
+        flex-direction: column-reverse;
+        align-items: center;
+    
+    }
+
+    .flex img {
+        width: 50%;
+        padding: 2%;
+        
+    }
+}
