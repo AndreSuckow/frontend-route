@@ -93,6 +93,11 @@ section button:hover {
     background-color: #49ff55;
 }
 
+section button a{
+    font-size: clamp(1rem, 0.8955rem + 0.6079vw, 1.625rem);
+}
+
+
 section button a:hover {
     text-decoration: underline;
 }
